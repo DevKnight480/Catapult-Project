@@ -1,14 +1,40 @@
 <html>
-	<head>
-		<center>
-			<h1>Insert title here</h1>
-		</center>	
-	</head>
-	<body>
-		Here are some lyrics! Enjoy! <br>
-		Might be a little confusing <br>
-		<font size="1" >
-			Translate it?
-		</font>
-	</body>
+<head>
+<script>
+function getCookie(cname) {
+	let name = cname + "=";
+	let decodedCookie = decodeURIComponent(document.cookie);
+	let ca = decodedCookie.split(';');
+	for(let i = 0; i <ca.length; i++) {
+		let c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+function checkCookie(){
+	var password = getCookie("login");
+	alert(password);
+	if(password === "" || password === "False"){
+	alert("sneaky");
+	location.replace("index.html");
+	}
+}
+window.onload = checkCookie;
+</script>
+<center>
+<h1>Shouted</h1>
+</center>	
+</head>
+<body>
+Here are some lyrics! Enjoy! <br>
+Might be a little confusing <br>
+<font size="1" >
+Translate it?
+</font>
+</body>
 </html>

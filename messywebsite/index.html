@@ -9,7 +9,9 @@
 				document.cookie = "login=True; path=/";
 			location.replace('rock.html');
 			}
-			else{alert("Wrong password");}
+			else{
+				document.cookie = "login=False; path=/";
+				alert("Wrong password");}
 		}
 		</script>
 	</head>
