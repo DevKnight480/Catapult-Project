@@ -1,2 +1,24 @@
 <html>
+	<head> <title> This is my title </title> 
+	<script> 
+		function SignIn() {
+			var  password = document.getElementById("passwordInput").value;
+			if(password === "this_isnt_the_password") 
+			{
+			
+				document.cookie = "login=True; path=/";
+			location.replace('rock.html');
+			}
+			else{alert("Wrong password");}
+		}
+		</script>
+	</head>
+	<body> 
+	<h1> This only works on FireFox. </h1>
+	<input type="password" id="passwordInput"> <br>
+	<button onclick="SignIn()">Okay</button>
+	</body>
+	</html>
+
+		
 
